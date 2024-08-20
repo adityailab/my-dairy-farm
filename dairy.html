@@ -1,17 +1,86 @@
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting the default way
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Pastures Dairy Farm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Green Pastures Dairy Farm</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    // Simple form validation (example)
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    <section id="home">
+        <div class="container">
+            <h2>Welcome to Green Pastures Dairy Farm!</h2>
+            <p>Providing fresh, high-quality dairy products straight from our farm to your table.</p>
+            <img src="images/dairy-farm.jpg" alt="Dairy Farm">
+        </div>
+    </section>
 
-    if (name && email && message) {
-        alert('Thank you for your message, ' + name + '!');
-        // Here you would typically send the form data to a server or API
-        // For this example, we'll just clear the form
-        document.getElementById('contact-form').reset();
-    } else {
-        alert('Please fill out all fields.');
-    }
-});
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Green Pastures Dairy Farm, we take pride in our traditional farming methods and our commitment to animal welfare. Our cows are raised on lush green pastures and are given the best care to ensure high-quality milk and dairy products.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Fresh Milk Delivery</li>
+                <li>Homemade Cheese</li>
+                <li>Organic Yogurt</li>
+                <li>Farm Tours</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Whether you have a question about our products, services, or just want to say hello, feel free to reach out.</p>
+            
+            <div class="contact-details">
+                <h3>Our Contact Details:</h3>
+                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                <p><strong>Email:</strong> <a href="mailto:info@greenpasturesdairy.com">info@greenpasturesdairy.com</a></p>
+                <p><strong>Address:</strong> 123 Green Pastures Road, Dairyville, DA 12345, USA</p>
+            </div>
+
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Green Pastures Dairy Farm. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
